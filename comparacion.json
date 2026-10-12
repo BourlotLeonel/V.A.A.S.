@@ -1,0 +1,990 @@
+{
+  "config": {
+    "rates": [
+      2,
+      6
+    ],
+    "seconds": 600,
+    "seeds": [
+      2026,
+      2027,
+      2028
+    ],
+    "mix": "urban",
+    "acceleration": 1,
+    "maxDrain": 3600,
+    "schedule": null,
+    "emissions": {
+      "idleLitresPerHour": [
+        0.8,
+        0.25,
+        2.5,
+        3
+      ],
+      "engineOnPercent": 100
+    }
+  },
+  "emissions": {
+    "dynamic": {
+      "litres": 1.264820833333163,
+      "kg": 3.1643958306717126,
+      "gramsPerVehicle": 13.940069738641906,
+      "byType": [
+        {
+          "seconds": 2762.099999999131,
+          "litres": 0.6137999999998069,
+          "kg": 1.4410164365881006
+        },
+        {
+          "seconds": 1154.8000000001598,
+          "litres": 0.08019444444445555,
+          "kg": 0.18827225898916272
+        },
+        {
+          "seconds": 550.5500000000245,
+          "litres": 0.3823263888889059,
+          "kg": 1.0281794586628419
+        },
+        {
+          "seconds": 226.19999999999357,
+          "litres": 0.18849999999999464,
+          "kg": 0.5069276764316073
+        }
+      ]
+    },
+    "static": {
+      "litres": 2.9297409722217482,
+      "kg": 7.330514485440251,
+      "gramsPerVehicle": 32.29301535436234,
+      "byType": [
+        {
+          "seconds": 6486.099999997299,
+          "litres": 1.4413555555549555,
+          "kg": 3.3838661559513152
+        },
+        {
+          "seconds": 2361.849999999495,
+          "litres": 0.16401736111107604,
+          "kg": 0.38506307143522456
+        },
+        {
+          "seconds": 1004.4500000001256,
+          "litres": 0.6975347222223094,
+          "kg": 1.8758602438542813
+        },
+        {
+          "seconds": 752.2000000000892,
+          "litres": 0.6268333333334076,
+          "kg": 1.68572501419943
+        }
+      ]
+    },
+    "complete": true,
+    "deltaKg": 4.166118654768538,
+    "deltaPercent": 56.832554700535894
+  },
+  "count": 227,
+  "complete": true,
+  "dynamic": {
+    "idleSecondsByType": [
+      2762.099999999131,
+      1154.8000000001598,
+      550.5500000000245,
+      226.19999999999357
+    ],
+    "totalStopped": 4693.649999999989,
+    "meanStopped": 20.676872246695986,
+    "meanTrip": 50.78458149779868,
+    "pending": 0,
+    "horizonPending": 14
+  },
+  "static": {
+    "idleSecondsByType": [
+      6486.099999997299,
+      2361.849999999495,
+      1004.4500000001256,
+      752.2000000000892
+    ],
+    "totalStopped": 10604.599999999737,
+    "meanStopped": 46.71629955947021,
+    "meanTrip": 77.57863436123057,
+    "pending": 0,
+    "horizonPending": 25
+  },
+  "savedPerVehicle": 26.039427312774222,
+  "savedTotalSeconds": 5910.949999999748,
+  "savedPercent": 55.739490409821165,
+  "runs": [
+    {
+      "seed": 2026,
+      "arrivals": 68,
+      "horizon": {
+        "dynamic": {
+          "arrived": 68,
+          "served": 64,
+          "pending": 4,
+          "queue": 1,
+          "totalStopped": 1058.4500000000014,
+          "meanStopped": 15.565441176470609,
+          "completedTrip": 2901.2000000001963,
+          "idleSecondsByType": [
+            527.9000000000676,
+            260.40000000002493,
+            156.60000000000136,
+            113.54999999999569
+          ]
+        },
+        "static": {
+          "arrived": 68,
+          "served": 58,
+          "pending": 10,
+          "queue": 9,
+          "totalStopped": 3114.7499999999286,
+          "meanStopped": 45.80514705882248,
+          "completedTrip": 4544.80000000056,
+          "idleSecondsByType": [
+            1930.399999998792,
+            634.2999999999709,
+            202.1000000000117,
+            347.95000000004484
+          ]
+        }
+      },
+      "dynamic": {
+        "arrived": 68,
+        "served": 68,
+        "pending": 0,
+        "queue": 0,
+        "totalStopped": 1081.0000000000016,
+        "meanStopped": 15.897058823529434,
+        "completedTrip": 3104.6500000000106,
+        "idleSecondsByType": [
+          527.9000000000676,
+          269.550000000027,
+          156.60000000000136,
+          126.94999999999493
+        ]
+      },
+      "static": {
+        "arrived": 68,
+        "served": 68,
+        "pending": 0,
+        "queue": 0,
+        "totalStopped": 3497.249999999912,
+        "meanStopped": 51.43014705882223,
+        "completedTrip": 5639.949999999575,
+        "idleSecondsByType": [
+          2189.9999999992015,
+          683.7999999999258,
+          202.1000000000117,
+          421.3500000000615
+        ]
+      },
+      "drainSeconds": 117,
+      "complete": true,
+      "savedPerVehicle": 35.533088235292794,
+      "trace": [
+        {
+          "time": 30,
+          "dynamic": {
+            "arrived": 6,
+            "served": 0,
+            "pending": 6,
+            "queue": 2,
+            "totalStopped": 11.249999999999982,
+            "meanStopped": 1.8749999999999971,
+            "completedTrip": 0,
+            "idleSecondsByType": [
+              8.949999999999992,
+              0.05,
+              2.25,
+              0
+            ]
+          },
+          "static": {
+            "arrived": 6,
+            "served": 0,
+            "pending": 6,
+            "queue": 5,
+            "totalStopped": 37.95000000000005,
+            "meanStopped": 6.325000000000009,
+            "completedTrip": 0,
+            "idleSecondsByType": [
+              23.150000000000194,
+              0.05,
+              14.750000000000075,
+              0
+            ]
+          }
+        },
+        {
+          "time": 60,
+          "dynamic": {
+            "arrived": 7,
+            "served": 4,
+            "pending": 3,
+            "queue": 1,
+            "totalStopped": 67.80000000000052,
+            "meanStopped": 9.68571428571436,
+            "completedTrip": 129.5499999999989,
+            "idleSecondsByType": [
+              35.950000000000095,
+              29.600000000000286,
+              2.25,
+              0
+            ]
+          },
+          "static": {
+            "arrived": 7,
+            "served": 3,
+            "pending": 4,
+            "queue": 2,
+            "totalStopped": 126.4000000000007,
+            "meanStopped": 18.057142857142956,
+            "completedTrip": 121.49999999999758,
+            "idleSecondsByType": [
+              103.14999999999628,
+              0.05,
+              23.200000000000195,
+              0
+            ]
+          }
+        },
+        {
+          "time": 90,
+          "dynamic": {
+            "arrived": 9,
+            "served": 6,
+            "pending": 3,
+            "queue": 0,
+            "totalStopped": 92.75000000000026,
+            "meanStopped": 10.305555555555584,
+            "completedTrip": 240.09999999999454,
+            "idleSecondsByType": [
+              51.99999999999918,
+              38.49999999999995,
+              2.25,
+              0
+            ]
+          },
+          "static": {
+            "arrived": 9,
+            "served": 4,
+            "pending": 5,
+            "queue": 2,
+            "totalStopped": 200.54999999999836,
+            "meanStopped": 22.28333333333315,
+            "completedTrip": 167.24999999999613,
+            "idleSecondsByType": [
+              177.30000000000607,
+              0.05,
+              23.200000000000195,
+              0
+            ]
+          }
+        },
+        {
+          "time": 120,
+          "dynamic": {
+            "arrived": 16,
+            "served": 9,
+            "pending": 7,
+            "queue": 0,
+            "totalStopped": 98.45000000000024,
+            "meanStopped": 6.153125000000015,
+            "completedTrip": 350.09999999998826,
+            "idleSecondsByType": [
+              56.9999999999989,
+              38.54999999999995,
+              2.25,
+              0.65
+            ]
+          },
+          "static": {
+            "arrived": 16,
+            "served": 6,
+            "pending": 10,
+            "queue": 6,
+            "totalStopped": 335.99999999999636,
+            "meanStopped": 20.999999999999773,
+            "completedTrip": 289.3999999999907,
+            "idleSecondsByType": [
+              282.2500000000299,
+              16.000000000000092,
+              23.200000000000195,
+              14.550000000000072
+            ]
+          }
+        },
+        {
+          "time": 150,
+          "dynamic": {
+            "arrived": 20,
+            "served": 15,
+            "pending": 5,
+            "queue": 2,
+            "totalStopped": 140.9000000000005,
+            "meanStopped": 7.045000000000025,
+            "completedTrip": 529.0999999999881,
+            "idleSecondsByType": [
+              69.59999999999819,
+              38.79999999999993,
+              6.199999999999986,
+              26.30000000000024
+            ]
+          },
+          "static": {
+            "arrived": 20,
+            "served": 9,
+            "pending": 11,
+            "queue": 8,
+            "totalStopped": 563.9999999999923,
+            "meanStopped": 28.199999999999612,
+            "completedTrip": 446.49999999999,
+            "idleSecondsByType": [
+              420.15000000006125,
+              46.24999999999951,
+              23.250000000000195,
+              74.34999999999792
+            ]
+          }
+        },
+        {
+          "time": 180,
+          "dynamic": {
+            "arrived": 24,
+            "served": 18,
+            "pending": 6,
+            "queue": 3,
+            "totalStopped": 208.9500000000005,
+            "meanStopped": 8.70625000000002,
+            "completedTrip": 612.1000000000042,
+            "idleSecondsByType": [
+              93.54999999999683,
+              38.79999999999993,
+              36.20000000000008,
+              40.39999999999984
+            ]
+          },
+          "static": {
+            "arrived": 24,
+            "served": 14,
+            "pending": 10,
+            "queue": 9,
+            "totalStopped": 787.099999999982,
+            "meanStopped": 32.79583333333258,
+            "completedTrip": 721.6500000000287,
+            "idleSecondsByType": [
+              528.8500000000668,
+              83.24999999999741,
+              23.250000000000195,
+              151.75000000000026
+            ]
+          }
+        },
+        {
+          "time": 210,
+          "dynamic": {
+            "arrived": 26,
+            "served": 21,
+            "pending": 5,
+            "queue": 3,
+            "totalStopped": 294.499999999999,
+            "meanStopped": 11.326923076923038,
+            "completedTrip": 764.100000000033,
+            "idleSecondsByType": [
+              125.39999999999502,
+              38.79999999999993,
+              62.44999999999859,
+              67.84999999999829
+            ]
+          },
+          "static": {
+            "arrived": 26,
+            "served": 16,
+            "pending": 10,
+            "queue": 2,
+            "totalStopped": 969.0499999999764,
+            "meanStopped": 37.27115384615294,
+            "completedTrip": 875.7500000000524,
+            "idleSecondsByType": [
+              604.5999999999979,
+              98.49999999999655,
+              33.35000000000024,
+              232.60000000001864
+            ]
+          }
+        },
+        {
+          "time": 240,
+          "dynamic": {
+            "arrived": 30,
+            "served": 24,
+            "pending": 6,
+            "queue": 1,
+            "totalStopped": 367.89999999999793,
+            "meanStopped": 12.263333333333264,
+            "completedTrip": 985.9000000000833,
+            "idleSecondsByType": [
+              137.49999999999702,
+              51.14999999999923,
+              87.99999999999714,
+              91.24999999999696
+            ]
+          },
+          "static": {
+            "arrived": 30,
+            "served": 24,
+            "pending": 6,
+            "queue": 3,
+            "totalStopped": 1042.6499999999755,
+            "meanStopped": 34.754999999999185,
+            "completedTrip": 1670.0500000001884,
+            "idleSecondsByType": [
+              635.6999999999696,
+              110.99999999999584,
+              63.34999999999854,
+              232.60000000001864
+            ]
+          }
+        },
+        {
+          "time": 270,
+          "dynamic": {
+            "arrived": 33,
+            "served": 27,
+            "pending": 6,
+            "queue": 2,
+            "totalStopped": 419.89999999999833,
+            "meanStopped": 12.724242424242373,
+            "completedTrip": 1172.1000000001256,
+            "idleSecondsByType": [
+              151.9500000000003,
+              88.04999999999714,
+              87.99999999999714,
+              91.89999999999692
+            ]
+          },
+          "static": {
+            "arrived": 33,
+            "served": 25,
+            "pending": 8,
+            "queue": 6,
+            "totalStopped": 1181.7999999999736,
+            "meanStopped": 35.81212121212041,
+            "completedTrip": 1759.2500000002087,
+            "idleSecondsByType": [
+              693.3999999999171,
+              161.80000000000254,
+              93.34999999999684,
+              233.2500000000188
+            ]
+          }
+        },
+        {
+          "time": 300,
+          "dynamic": {
+            "arrived": 35,
+            "served": 30,
+            "pending": 5,
+            "queue": 2,
+            "totalStopped": 473.89999999999804,
+            "meanStopped": 13.539999999999944,
+            "completedTrip": 1288.2000000001522,
+            "idleSecondsByType": [
+              177.60000000000613,
+              108.29999999999599,
+              87.99999999999714,
+              99.99999999999646
+            ]
+          },
+          "static": {
+            "arrived": 35,
+            "served": 27,
+            "pending": 8,
+            "queue": 8,
+            "totalStopped": 1340.6999999999698,
+            "meanStopped": 38.30571428571342,
+            "completedTrip": 1882.3000000002367,
+            "idleSecondsByType": [
+              774.899999999843,
+              191.80000000000936,
+              123.34999999999513,
+              250.65000000002274
+            ]
+          }
+        },
+        {
+          "time": 330,
+          "dynamic": {
+            "arrived": 39,
+            "served": 34,
+            "pending": 5,
+            "queue": 2,
+            "totalStopped": 514.5499999999982,
+            "meanStopped": 13.1935897435897,
+            "completedTrip": 1507.550000000202,
+            "idleSecondsByType": [
+              206.80000000001277,
+              119.74999999999534,
+              87.99999999999714,
+              99.99999999999646
+            ]
+          },
+          "static": {
+            "arrived": 39,
+            "served": 29,
+            "pending": 10,
+            "queue": 9,
+            "totalStopped": 1563.3499999999644,
+            "meanStopped": 40.08589743589653,
+            "completedTrip": 2079.650000000281,
+            "idleSecondsByType": [
+              917.4999999997133,
+              234.05000000001897,
+              131.14999999999557,
+              280.65000000002954
+            ]
+          }
+        },
+        {
+          "time": 360,
+          "dynamic": {
+            "arrived": 41,
+            "served": 38,
+            "pending": 3,
+            "queue": 1,
+            "totalStopped": 560.9999999999987,
+            "meanStopped": 13.682926829268261,
+            "completedTrip": 1677.4000000002404,
+            "idleSecondsByType": [
+              239.4500000000202,
+              133.54999999999612,
+              87.99999999999714,
+              99.99999999999646
+            ]
+          },
+          "static": {
+            "arrived": 41,
+            "served": 30,
+            "pending": 11,
+            "queue": 3,
+            "totalStopped": 1770.2499999999577,
+            "meanStopped": 43.17682926829165,
+            "completedTrip": 2099.2500000002856,
+            "idleSecondsByType": [
+              1070.0999999995745,
+              270.4500000000272,
+              131.14999999999557,
+              298.5500000000336
+            ]
+          }
+        },
+        {
+          "time": 390,
+          "dynamic": {
+            "arrived": 46,
+            "served": 41,
+            "pending": 5,
+            "queue": 3,
+            "totalStopped": 565.9999999999987,
+            "meanStopped": 12.304347826086929,
+            "completedTrip": 1786.6000000002653,
+            "idleSecondsByType": [
+              243.20000000002105,
+              134.7499999999964,
+              88.04999999999714,
+              99.99999999999646
+            ]
+          },
+          "static": {
+            "arrived": 46,
+            "served": 38,
+            "pending": 8,
+            "queue": 3,
+            "totalStopped": 1856.6499999999553,
+            "meanStopped": 40.36195652173816,
+            "completedTrip": 2827.25000000045,
+            "idleSecondsByType": [
+              1154.7999999994975,
+              271.6500000000275,
+              131.64999999999569,
+              298.5500000000336
+            ]
+          }
+        },
+        {
+          "time": 420,
+          "dynamic": {
+            "arrived": 49,
+            "served": 43,
+            "pending": 6,
+            "queue": 2,
+            "totalStopped": 653.0499999999993,
+            "meanStopped": 13.327551020408148,
+            "completedTrip": 1835.7500000002765,
+            "idleSecondsByType": [
+              288.4500000000313,
+              154.80000000000095,
+              109.7999999999959,
+              99.99999999999646
+            ]
+          },
+          "static": {
+            "arrived": 49,
+            "served": 42,
+            "pending": 7,
+            "queue": 5,
+            "totalStopped": 1979.1499999999542,
+            "meanStopped": 40.390816326529674,
+            "completedTrip": 3148.650000000523,
+            "idleSecondsByType": [
+              1215.0499999994427,
+              315.45000000003745,
+              150.09999999999988,
+              298.5500000000336
+            ]
+          }
+        },
+        {
+          "time": 450,
+          "dynamic": {
+            "arrived": 56,
+            "served": 45,
+            "pending": 11,
+            "queue": 2,
+            "totalStopped": 782.0999999999997,
+            "meanStopped": 13.966071428571423,
+            "completedTrip": 1948.750000000302,
+            "idleSecondsByType": [
+              357.15000000004693,
+              202.65000000001183,
+              121.99999999999521,
+              100.29999999999644
+            ]
+          },
+          "static": {
+            "arrived": 56,
+            "served": 44,
+            "pending": 12,
+            "queue": 7,
+            "totalStopped": 2166.449999999951,
+            "meanStopped": 38.68660714285627,
+            "completedTrip": 3302.8500000005583,
+            "idleSecondsByType": [
+              1318.4499999993486,
+              394.8000000000555,
+              154.6000000000009,
+              298.6000000000336
+            ]
+          }
+        },
+        {
+          "time": 480,
+          "dynamic": {
+            "arrived": 56,
+            "served": 50,
+            "pending": 6,
+            "queue": 2,
+            "totalStopped": 882.1500000000007,
+            "meanStopped": 15.752678571428584,
+            "completedTrip": 2246.5500000003694,
+            "idleSecondsByType": [
+              404.75000000005775,
+              230.00000000001805,
+              133.8999999999962,
+              113.4999999999957
+            ]
+          },
+          "static": {
+            "arrived": 56,
+            "served": 47,
+            "pending": 9,
+            "queue": 8,
+            "totalStopped": 2421.7999999999474,
+            "meanStopped": 43.246428571427636,
+            "completedTrip": 3554.550000000616,
+            "idleSecondsByType": [
+              1425.9499999992508,
+              491.45000000007747,
+              177.8500000000062,
+              326.55000000004
+            ]
+          }
+        },
+        {
+          "time": 510,
+          "dynamic": {
+            "arrived": 58,
+            "served": 54,
+            "pending": 4,
+            "queue": 0,
+            "totalStopped": 932.0000000000009,
+            "meanStopped": 16.068965517241395,
+            "completedTrip": 2461.400000000418,
+            "idleSecondsByType": [
+              431.8500000000639,
+              230.05000000001806,
+              156.60000000000136,
+              113.4999999999957
+            ]
+          },
+          "static": {
+            "arrived": 58,
+            "served": 49,
+            "pending": 9,
+            "queue": 1,
+            "totalStopped": 2596.69999999994,
+            "meanStopped": 44.770689655171374,
+            "completedTrip": 3755.9000000006617,
+            "idleSecondsByType": [
+              1497.199999999186,
+              550.1000000000474,
+              202.1000000000117,
+              347.3000000000447
+            ]
+          }
+        },
+        {
+          "time": 540,
+          "dynamic": {
+            "arrived": 62,
+            "served": 57,
+            "pending": 5,
+            "queue": 1,
+            "totalStopped": 978.8000000000012,
+            "meanStopped": 15.787096774193568,
+            "completedTrip": 2647.100000000417,
+            "idleSecondsByType": [
+              470.6000000000727,
+              238.1000000000199,
+              156.60000000000136,
+              113.4999999999957
+            ]
+          },
+          "static": {
+            "arrived": 62,
+            "served": 56,
+            "pending": 6,
+            "queue": 4,
+            "totalStopped": 2681.699999999939,
+            "meanStopped": 43.25322580645063,
+            "completedTrip": 4315.950000000683,
+            "idleSecondsByType": [
+              1554.6499999991338,
+              577.6500000000224,
+              202.1000000000117,
+              347.3000000000447
+            ]
+          }
+        },
+        {
+          "time": 570,
+          "dynamic": {
+            "arrived": 66,
+            "served": 61,
+            "pending": 5,
+            "queue": 1,
+            "totalStopped": 1010.9000000000013,
+            "meanStopped": 15.316666666666688,
+            "completedTrip": 2779.3000000003067,
+            "idleSecondsByType": [
+              502.65000000008,
+              238.1500000000199,
+              156.60000000000136,
+              113.4999999999957
+            ]
+          },
+          "static": {
+            "arrived": 66,
+            "served": 56,
+            "pending": 10,
+            "queue": 8,
+            "totalStopped": 2875.9499999999357,
+            "meanStopped": 43.57499999999902,
+            "completedTrip": 4315.950000000683,
+            "idleSecondsByType": [
+              1718.8499999989845,
+              607.699999999995,
+              202.1000000000117,
+              347.3000000000447
+            ]
+          }
+        },
+        {
+          "time": 600,
+          "dynamic": {
+            "arrived": 68,
+            "served": 64,
+            "pending": 4,
+            "queue": 1,
+            "totalStopped": 1058.4500000000014,
+            "meanStopped": 15.565441176470609,
+            "completedTrip": 2901.2000000001963,
+            "idleSecondsByType": [
+              527.9000000000676,
+              260.40000000002493,
+              156.60000000000136,
+              113.54999999999569
+            ]
+          },
+          "static": {
+            "arrived": 68,
+            "served": 58,
+            "pending": 10,
+            "queue": 9,
+            "totalStopped": 3114.7499999999286,
+            "meanStopped": 45.80514705882248,
+            "completedTrip": 4544.80000000056,
+            "idleSecondsByType": [
+              1930.399999998792,
+              634.2999999999709,
+              202.1000000000117,
+              347.95000000004484
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": 2027,
+      "arrivals": 80,
+      "horizon": {
+        "dynamic": {
+          "arrived": 80,
+          "served": 76,
+          "pending": 4,
+          "queue": 1,
+          "totalStopped": 1726.1499999999924,
+          "meanStopped": 21.576874999999905,
+          "completedTrip": 3988.650000000369,
+          "idleSecondsByType": [
+            958.549999999676,
+            434.55000000006453,
+            273.4000000000279,
+            59.64999999999875
+          ]
+        },
+        "static": {
+          "arrived": 80,
+          "served": 71,
+          "pending": 9,
+          "queue": 7,
+          "totalStopped": 3446.499999999918,
+          "meanStopped": 43.081249999998974,
+          "completedTrip": 5121.650000000736,
+          "idleSecondsByType": [
+            2092.0999999988453,
+            798.0999999998219,
+            502.1500000000799,
+            54.14999999999906
+          ]
+        }
+      },
+      "dynamic": {
+        "arrived": 80,
+        "served": 80,
+        "pending": 0,
+        "queue": 0,
+        "totalStopped": 1767.799999999993,
+        "meanStopped": 22.09749999999991,
+        "completedTrip": 4193.150000000182,
+        "idleSecondsByType": [
+          985.949999999651,
+          448.80000000006777,
+          273.4000000000279,
+          59.64999999999875
+        ]
+      },
+      "static": {
+        "arrived": 80,
+        "served": 80,
+        "pending": 0,
+        "queue": 0,
+        "totalStopped": 3614.499999999912,
+        "meanStopped": 45.1812499999989,
+        "completedTrip": 6051.949999999915,
+        "idleSecondsByType": [
+          2227.4499999993377,
+          822.2999999997999,
+          510.6000000000818,
+          54.14999999999906
+        ]
+      },
+      "drainSeconds": 63,
+      "complete": true,
+      "savedPerVehicle": 23.083749999998986,
+      "trace": []
+    },
+    {
+      "seed": 2028,
+      "arrivals": 79,
+      "horizon": {
+        "dynamic": {
+          "arrived": 79,
+          "served": 73,
+          "pending": 6,
+          "queue": 2,
+          "totalStopped": 1799.1999999999953,
+          "meanStopped": 22.774683544303738,
+          "completedTrip": 3867.7500000004393,
+          "idleSecondsByType": [
+            1217.0999999994408,
+            436.45000000006496,
+            120.5499999999953,
+            25.10000000000022
+          ]
+        },
+        "static": {
+          "arrived": 79,
+          "served": 73,
+          "pending": 6,
+          "queue": 6,
+          "totalStopped": 3170.549999999927,
+          "meanStopped": 40.13354430379654,
+          "completedTrip": 5261.400000000447,
+          "idleSecondsByType": [
+            1945.949999998778,
+            803.0499999998174,
+            236.0000000000194,
+            185.55000000000794
+          ]
+        }
+      },
+      "dynamic": {
+        "arrived": 79,
+        "served": 79,
+        "pending": 0,
+        "queue": 0,
+        "totalStopped": 1844.8499999999935,
+        "meanStopped": 23.352531645569538,
+        "completedTrip": 4230.300000000108,
+        "idleSecondsByType": [
+          1248.2499999994125,
+          436.45000000006496,
+          120.5499999999953,
+          39.59999999999989
+        ]
+      },
+      "static": {
+        "arrived": 79,
+        "served": 79,
+        "pending": 0,
+        "queue": 0,
+        "totalStopped": 3492.849999999912,
+        "meanStopped": 44.213291139239395,
+        "completedTrip": 5918.449999999849,
+        "idleSecondsByType": [
+          2068.64999999876,
+          855.7499999997694,
+          291.75000000003206,
+          276.70000000002864
+        ]
+      },
+      "drainSeconds": 115,
+      "complete": true,
+      "savedPerVehicle": 20.860759493669857,
+      "trace": []
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "complete": true,
+  "config": {
+    "seconds": 61200,
+    "seed": 2026,
+    "mix": "urban",
+    "acceleration": 1,
+    "sideShare": 25,
+    "sideDistribution": "spread",
+    "arterialShare": 75,
+    "spacing": [
+      150,
+      150,
+      150,
+      150
+    ],
+    "linkCapacities": [
+      15,
+      15,
+      15,
+      15
+    ],
+    "drainSeconds": 361.85
+  },
+  "dynamic": {
+    "started": 10290,
+    "completed": 10290,
+    "incomplete": 0,
+    "activeTrips": 0,
+    "unservedVisits": 0,
+    "inFlightVehicles": 0,
+    "pendingApproaches": 0,
+    "meanStopped": 45.816496598638814,
+    "meanTrip": 113.48189990488399,
+    "stoppedVehicleHours": 130.9588194444426,
+    "maxCorridorQueue": 52,
+    "currentQueue": 0,
+    "perNode": [
+      {
+        "name": "Alvear",
+        "arrived": 6657,
+        "served": 6657,
+        "queue": 0,
+        "maxQueue": 24
+      },
+      {
+        "name": "Laprida",
+        "arrived": 6322,
+        "served": 6322,
+        "queue": 0,
+        "maxQueue": 23
+      },
+      {
+        "name": "25 de Mayo",
+        "arrived": 6289,
+        "served": 6289,
+        "queue": 0,
+        "maxQueue": 18
+      },
+      {
+        "name": "Sarmiento",
+        "arrived": 6306,
+        "served": 6306,
+        "queue": 0,
+        "maxQueue": 20
+      },
+      {
+        "name": "San Luis",
+        "arrived": 6561,
+        "served": 6561,
+        "queue": 0,
+        "maxQueue": 22
+      }
+    ],
+    "idleSecondsByType": [
+      316825.90000722196,
+      101881.19999921868,
+      34724.650000082496,
+      18020.000000021726
+    ]
+  },
+  "fixed": {
+    "started": 10290,
+    "completed": 10290,
+    "incomplete": 0,
+    "activeTrips": 0,
+    "unservedVisits": 0,
+    "inFlightVehicles": 0,
+    "pendingApproaches": 0,
+    "meanStopped": 726.3600826042436,
+    "meanTrip": 803.9027259568,
+    "stoppedVehicleHours": 2076.179236110463,
+    "maxCorridorQueue": 421,
+    "currentQueue": 0,
+    "perNode": [
+      {
+        "name": "Alvear",
+        "arrived": 6657,
+        "served": 6657,
+        "queue": 0,
+        "maxQueue": 185
+      },
+      {
+        "name": "Laprida",
+        "arrived": 6322,
+        "served": 6322,
+        "queue": 0,
+        "maxQueue": 29
+      },
+      {
+        "name": "25 de Mayo",
+        "arrived": 6289,
+        "served": 6289,
+        "queue": 0,
+        "maxQueue": 26
+      },
+      {
+        "name": "Sarmiento",
+        "arrived": 6306,
+        "served": 6306,
+        "queue": 0,
+        "maxQueue": 24
+      },
+      {
+        "name": "San Luis",
+        "arrived": 6561,
+        "served": 6561,
+        "queue": 0,
+        "maxQueue": 222
+      }
+    ],
+    "idleSecondsByType": [
+      5062511.501677331,
+      1521539.9000723655,
+      559722.7999580777,
+      330471.0500045791
+    ]
+  },
+  "delta": {
+    "meanStoppedSeconds": 680.5435860056049,
+    "meanStoppedPercent": 93.69231629106444,
+    "meanTripSeconds": 690.420826051916,
+    "co2Kg": 4388.008672519003,
+    "co2Percent": 93.8582548463068
+  },
+  "emissions": {
+    "dynamic": {
+      "litres": 116.61184583495935,
+      "kg": 287.1354367598037,
+      "gramsPerVehicle": 27.90431844118598,
+      "byType": [
+        {
+          "seconds": 316825.90000722196,
+          "litres": 70.40575555716043,
+          "kg": 165.29138316765085
+        },
+        {
+          "seconds": 101881.19999921868,
+          "litres": 7.075083333279075,
+          "kg": 16.610152123637796
+        },
+        {
+          "seconds": 34724.650000082496,
+          "litres": 24.11434027783507,
+          "kg": 64.85000788182705
+        },
+        {
+          "seconds": 18020.000000021726,
+          "litres": 15.016666666684774,
+          "kg": 40.38389358668806
+        }
+      ]
+    },
+    "fixed": {
+      "litres": 1894.7539795191353,
+      "kg": 4675.144109278807,
+      "gramsPerVehicle": 454.33859176664794,
+      "byType": [
+        {
+          "seconds": 5062511.501677331,
+          "litres": 1125.0025559282956,
+          "kg": 2641.16515851549
+        },
+        {
+          "seconds": 1521539.9000723655,
+          "litres": 105.66249306058094,
+          "kg": 248.06352106748312
+        },
+        {
+          "seconds": 559722.7999580777,
+          "litres": 388.6963888597762,
+          "kg": 1045.310117994952
+        },
+        {
+          "seconds": 330471.0500045791,
+          "litres": 275.3925416704826,
+          "kg": 740.6053117008823
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": 38,
+      "signal": 37,
+      "name": "Alvear",
+      "movement": 3,
+      "countC": 3,
+      "cycle": 101,
+      "cab1": 2,
+      "cab3": 3,
+      "cab2": null,
+      "signs": "No legible",
+      "index": 0,
+      "street": "Alvear y San Lorenzo"
+    },
+    {
+      "id": 39,
+      "signal": 38,
+      "name": "Laprida",
+      "movement": 2,
+      "countC": 3,
+      "cycle": 101,
+      "cab1": 2,
+      "cab3": 3,
+      "cab2": null,
+      "signs": "No legible",
+      "index": 1,
+      "street": "Laprida y San Lorenzo"
+    },
+    {
+      "id": 53,
+      "signal": 52,
+      "name": "25 de Mayo",
+      "movement": 3,
+      "countC": 3,
+      "cycle": 101,
+      "cab1": 2,
+      "cab3": 3,
+      "cab2": null,
+      "signs": "No legible",
+      "index": 2,
+      "street": "25 de Mayo y San Lorenzo"
+    },
+    {
+      "id": 40,
+      "signal": 39,
+      "name": "Sarmiento",
+      "movement": 2,
+      "countC": 2,
+      "cycle": 101,
+      "cab1": 2,
+      "cab3": 2,
+      "cab2": null,
+      "signs": "No",
+      "index": 3,
+      "street": "Sarmiento y San Lorenzo"
+    },
+    {
+      "id": 54,
+      "signal": 53,
+      "name": "San Luis",
+      "movement": 3,
+      "countC": 2,
+      "cycle": 101,
+      "cab1": 3,
+      "cab3": 2,
+      "cab2": null,
+      "signs": "No legible",
+      "index": 4,
+      "street": "San Luis y San Lorenzo"
+    }
+  ]
+}

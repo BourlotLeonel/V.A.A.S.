@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Simulación exploratoria del corredor semaforizado de San Lorenzo en Concordia.">
+  <title>V.A.A.S. | Corredor San Lorenzo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .corridor-main{max-width:1480px;margin:0 auto;padding:28px 24px 72px}
+    .corridor-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.75fr);gap:24px;align-items:start}
+    .corridor-intro h1{margin:6px 0 10px;font-size:clamp(2rem,4vw,3rem)}
+    .corridor-intro p{max-width:780px;line-height:1.6}
+    .notice{border-left:4px solid #c78a30;background:#f8f4e9;padding:16px 18px;border-radius:8px;line-height:1.55}
+    .panel{margin-top:22px}
+    .controls{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:16px;align-items:end}
+    .controls label{display:grid;gap:7px;font-weight:600}
+    .controls input,.controls select{width:100%;min-height:42px;padding:8px 10px;border:1px solid #aeb9c3;border-radius:7px;background:#fff;color:#142232}
+    .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}
+    .progress{height:10px;background:#e6ebef;border-radius:20px;overflow:hidden;margin-top:16px}
+    .progress>i{display:block;height:100%;width:0;background:#2670a6;transition:width .15s}
+    .status{min-height:24px;margin-top:8px;color:#526577}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+    .metric{padding:16px;border:1px solid #d5dde4;background:#fff;border-radius:10px}
+    .metric small{display:block;color:#526577;line-height:1.35}
+    .metric strong{display:block;font-size:1.55rem;margin-top:8px;color:#15334b}
+    .corridor-flow{display:grid;grid-template-columns:repeat(5,minmax(145px,1fr));gap:12px;position:relative;margin-top:20px}
+    .corridor-flow:before{content:"";height:7px;background:#d5dbe1;position:absolute;left:3%;right:3%;top:22px;z-index:0;border-radius:8px}
+    .node-card{position:relative;z-index:1;border:1px solid #d5dde4;background:#fff;border-radius:10px;padding:12px;min-width:0}
+    .node-dot{width:20px;height:20px;border-radius:50%;background:#2670a6;border:4px solid #dcecf7;margin:4px auto 10px}
+    .node-card h3{text-align:center;margin:0 0 4px;font-size:1rem}
+    .node-card .code{text-align:center;color:#617386;font-size:.8rem;margin-bottom:12px}
+    .node-card dl{display:grid;grid-template-columns:1fr auto;gap:5px 8px;margin:0;font-size:.85rem}
+    .node-card dt{color:#56697b}.node-card dd{margin:0;font-weight:700;text-align:right}
+    .compass{font-size:.8rem;color:#526577;margin-top:12px}
+    .table-wrap{overflow:auto;margin-top:12px}
+    table{width:100%;border-collapse:collapse;min-width:760px}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #e0e5e9;vertical-align:top}
+    th{font-size:.85rem;color:#40596d;background:#f5f7f8}
+    td{font-size:.9rem}
+    .muted{color:#586b7b;line-height:1.55}
+    .danger{border-left:4px solid #bf5b45;background:#fbf0ed;padding:15px 18px;border-radius:8px;line-height:1.55}
+    .small{font-size:.86rem}
+    @media(max-width:950px){.corridor-intro{grid-template-columns:1fr}.controls{grid-template-columns:repeat(2,minmax(0,1fr))}.corridor-flow{grid-template-columns:repeat(3,minmax(140px,1fr))}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.corridor-main{padding:18px 12px 48px}.controls,.corridor-flow{grid-template-columns:1fr}.corridor-flow:before{left:16px;right:auto;top:16px;bottom:16px;width:6px;height:auto}.node-dot{margin-left:0}.node-card h3,.node-card .code{text-align:left}.metrics{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<header><div class="brand"><strong>V.A.A.S.</strong><span>Visión Artificial Aplicada a Semáforos</span></div><div class="institution">UNER <span>Ingeniería Mecatrónica · Proyecto académico</span></div></header>
+<nav aria-label="Secciones"><a href="index.html">Cruce piloto</a><a href="#run">Simulación de corredor</a><a href="#semaphores">Datos municipales</a><span>Concordia, Entre Ríos</span></nav>
+<main class="corridor-main">
+  <section class="corridor-intro">
+    <div><p class="eyebrow">SAN LORENZO · CINCO CRUCES SEMAFORIZADOS</p><h1>Comparación en corredor</h1><p>Extiende el mismo modelo de vehículos y la misma lógica de control a cinco intersecciones conectadas. Cada par dinámico/estático recibe las mismas llegadas externas; los autos que siguen por San Lorenzo se transfieren al cruce siguiente.</p></div>
+    <div class="notice"><strong>Alcance del dato municipal</strong><br>Las capturas muestran identificadores, movimientos, cantidad C y un ciclo de 101 s, pero no incluyen coordenadas exactas ni reparto de fases. El ciclo se conserva como referencia, sin inventar verdes. El fijo del prototipo usa 30 s por acceso y transiciones; su ciclo nominal mínimo es 152 s, así que no representa el programa municipal de 101 s.</div>
+  </section>
+  <section class="panel" id="run">
+    <div class="panel-head"><h2>Parámetros de la corrida</h2><span class="badge neutral">Tránsito simulado · no procesa video</span></div>
+    <div class="controls">
+      <label>Duración de llegadas (horas)<input id="hours" type="number" min="1" max="24" step="1" value="17"></label>
+      <label>Semilla compartida<input id="seed" type="number" min="1" step="1" value="2026"></label>
+      <label>Demanda de calles transversales (%)<input id="side-share" type="number" min="0" max="100" step="1" value="25"></label>
+      <label>Cómo repartirla<select id="side-distribution"><option value="spread" selected>Repartir entre los cinco cruces</option><option value="perNode">Aplicar ese porcentaje en cada cruce</option></select></label>
+      <label>Separación esquemática entre semáforos (m)<input id="spacing" type="number" min="80" max="500" step="10" value="150"></label>
+      <label>Composición vehicular<select id="mix"><option value="urban" selected>Urbana (auto, moto, colectivo, camión)</option><option value="freight">Pesada</option></select></label>
+      <label>Aceleración de vehículos<select id="acceleration"><option value="1" selected>Referencia del prototipo · 1×</option><option value="0.8">Más lenta · 0,8×</option><option value="1.2">Más rápida · 1,2×</option></select></label>
+    </div>
+    <p class="muted small">Se reutiliza el horario de demanda de la simulación anterior (06:00–23:00 por defecto). El porcentaje restante entra por los extremos de San Lorenzo. Por defecto, la demanda transversal indicada se reparte entre las cinco calles; la otra opción la repite en cada cruce como escenario de estrés.</p>
+    <div class="actions"><button id="run-button" class="primary">Ejecutar comparación</button><button id="export-button" disabled>Exportar resultados CSV</button><span id="run-state" class="simulation-label">Listo para simular</span></div>
+    <div class="progress" aria-label="Progreso de simulación"><i id="progress-bar"></i></div><p id="progress-text" class="status" role="status">La corrida completa demora según el equipo. El cálculo trabaja en segundo plano por bloques.</p>
+  </section>
+  <section class="panel" id="results" hidden>
+    <div class="panel-head"><h2>Resultados de la corrida</h2><span id="complete-badge" class="badge"></span></div>
+    <div class="metrics" id="metrics"></div>
+    <h3>Cola máxima por intersección</h3><p class="muted small">Comparación de la mayor cantidad simultánea de vehículos detenidos en cada cruce durante la corrida.</p>
+    <div class="corridor-flow" id="flow"></div>
+  </section>
+  <section class="panel" id="semaphores">
+    <div class="panel-head"><h2>Inventario leído de las capturas municipales</h2><a href="https://ide.concordia.gob.ar/visualizador/" target="_blank" rel="noreferrer">IDE Concordia</a></div>
+    <p class="muted">Orden esquemático de oeste a este: Alvear → Laprida → 25 de Mayo → Sarmiento → San Luis. Los marcadores de las capturas permiten reconocer los cruces, pero las imágenes no aportan coordenadas por punto; las separaciones se mantienen como parámetro modificable.</p>
+    <div class="table-wrap"><table><thead><tr><th>Calle transversal</th><th>ID</th><th>N.º semáforo</th><th>Movimientos</th><th>Cantidad C</th><th>Ciclo informado</th><th>Cab. 1×300+</th><th>Cab. 3×200</th><th>Cartelería</th></tr></thead><tbody id="node-table"></tbody></table></div>
+  </section>
+  <section class="panel danger"><strong>Interpretación y seguridad.</strong> La salida es una hipótesis del modelo. No representa coordinación de onda verde medida ni predice el rendimiento real. El sistema conserva un único acceso habilitado por turno, amarillo y despeje del motor existente; los tiempos y movimientos deben contrastarse con planos de fase municipales y validarse por ingeniería de tránsito antes de cualquier conexión a controladores físicos.</section>
+  <p class="muted small">El enlace se representa con una sola fila por sentido y capacidad de almacenamiento aproximada de (distancia − 36 m) / 7,5 m; si se llena, el cruce aguas arriba retiene la salida. El motor conserva un carril por acceso: no modela los tres carriles por sentido mencionados para la avenida. Faltan coordenadas exactas, distribución de carriles y giros, estacionamiento, peatones reales y semáforos intermedios no incluidos. Fuente de atributos: capturas del visualizador municipal aportadas por el usuario; ciclo y fases no se interpretan sin su diccionario técnico.</p>
+</main>
+<script src="engine.js"></script><script src="day.js"></script><script src="emissions.js"></script><script src="corridor.js"></script><script src="corridor-results.js"></script><script src="corridor-view.js"></script>
+</body>
+</html>
